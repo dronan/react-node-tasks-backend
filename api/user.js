@@ -31,7 +31,7 @@ module.exports = (app) => {
         .db("users")
         .insert({
           name: req.body.name,
-          email: req.body.email,
+          email: req.body.email.toLowerCase(),
           password,
         })
         .then((_) => res.status(204).send())

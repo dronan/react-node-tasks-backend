@@ -9,6 +9,7 @@ module.exports = {
     database: "tasks",
     user: "postgres",
     password: "postgrespw",
+    port: 55000,
   },
   pool: {
     min: 2,

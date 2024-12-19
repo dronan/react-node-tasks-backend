@@ -1,0 +1,28 @@
+{
+  "name": "tasks-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "^0.0.3",
+    "body-parser": "^1.20.3",
+    "consign": "^0.1.6",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "jwt-simple": "^0.5.6",
+    "knex": "^3.1.0",
+    "moment": "^2.30.1",
+    "passport": "^0.7.0",
+    "passport-jwt": "^4.0.1",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

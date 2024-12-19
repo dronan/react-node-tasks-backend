@@ -9,7 +9,10 @@ module.exports = (app) => {
     }
 
     // Search for the user in the database
-    const user = await app.db("users").where({ email: req.body.email }).first();
+    const user = await app
+      .db("users")
+      .whereRaw("LOWER(email) = LOWER(?)", req.body.email)
+      .first();
 
     if (user) {
       // Compare the password sent with the password in the database

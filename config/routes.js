@@ -1,6 +1,8 @@
 module.exports = (app) => {
   app.post("/signup", app.api.user.save);
   app.post("/signin", app.api.auth.signin);
+  app.put("/user/save/:id", app.api.user.update);
+  app.delete("/user/delete/:id", app.api.user.remove);
 
   app
     .route("/tasks")

@@ -19,13 +19,15 @@ module.exports = (app) => {
       bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
         // If the password is incorrect, return a 401 status code
         if (err || !isMatch) {
-          return res.status(401).send();
+          return res.status(401).send("The email or password is incorrect!");
         }
         // If the password is correct, generate the payload + token and send it to the client
         const payload = {
           id: user.id,
           name: user.name,
           email: user.email,
+          avatarUrl: user.avatarUrl,
+          password: req.body.password,
         };
 
         res.json({

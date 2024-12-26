@@ -18,7 +18,7 @@ module.exports = (app) => {
         if (user) {
           done(null, { id: user.id, email: user.email });
         } else {
-          done(err, false);
+          done(null, false);
         }
       })
       .catch((err) => done(err, false));
